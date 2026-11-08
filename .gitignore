@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/raw/
+mlruns/
+mlartifacts/
+*.db
+models/*.keras
+models/*.json
+reports/*.png
+.ipynb_checkpoints/
+.dvc/config.local
+.dvc/tmp
+.dvc/cache

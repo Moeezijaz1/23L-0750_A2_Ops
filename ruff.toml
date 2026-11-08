@@ -1,0 +1,5 @@
+line-length = 120
+target-version = "py311"
+[lint]
+select = ["E", "F"]
+ignore = ["E402", "E731"]   # E402: matplotlib.use("Agg") must precede pyplot import

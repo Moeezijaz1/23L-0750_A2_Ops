@@ -1,0 +1,15 @@
+# Task 7 (pathway A/C) - run ONLY the model API on the cloud VM.  docker compose -f docker-compose.api.yml up -d --build
+services:
+  api:
+    build:
+      context: .
+      dockerfile: model_api/Dockerfile
+    restart: unless-stopped
+    environment:
+      API_KEY: ${REMOTE_API_KEY}
+      MODEL_PATH: /models/champion.keras
+      THRESHOLD: ${THRESHOLD:-}
+    volumes:
+      - ./models:/models:ro
+    ports:
+      - "8000:8000"
