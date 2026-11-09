@@ -1,0 +1,15 @@
+﻿FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install dependencies
+COPY requirements-api.txt .
+RUN pip install --no-cache-dir -r requirements-api.txt
+
+# Copy source code and models
+COPY vg ./vg
+COPY models ./models
+
+EXPOSE 8000
+
+CMD ["uvicorn", "vg.api:app", "--host", "0.0.0.0", "--port", "10000"]
