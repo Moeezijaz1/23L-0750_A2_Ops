@@ -1,0 +1,39 @@
+Images per class:
+cls
+ai      539
+real    435
+
+Min / median / max per class:
+width
+      min  median   max
+cls                    
+ai    225  1024.0  6000
+real  183   940.0  8495
+
+height
+      min  median   max
+cls                    
+ai    135   800.0  4001
+real  158   720.0  7091
+
+file_size
+        min    median       max
+cls                            
+ai    11738  199760.0   5626183
+real  11311  144982.0  10195352
+
+Colour modes:
+mode
+RGB     895
+RGBA     49
+P        23
+L         7
+
+Formats:
+format
+JPEG    831
+PNG     143
+
+Corrupt/unreadable files: 0
+Exact duplicates (extra copies): 1
+Hashes appearing in both classes: 0

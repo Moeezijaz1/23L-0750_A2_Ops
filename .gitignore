@@ -2,7 +2,6 @@
 .venv/
 __pycache__/
 *.pyc
-data/raw/
 mlruns/
 mlartifacts/
 *.db
