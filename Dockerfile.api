@@ -1,15 +1,17 @@
-﻿FROM python:3.11-slim
+FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install dependencies
 COPY requirements-api.txt .
 RUN pip install --no-cache-dir -r requirements-api.txt
 
-# Copy source code and models
 COPY vg ./vg
+COPY app ./app
+COPY model_api ./model_api
 COPY models ./models
 
-EXPOSE 8000
+ENV MODEL_PATH=/app/models/champion.keras
 
-CMD ["uvicorn", "vg.api:app", "--host", "0.0.0.0", "--port", "10000"]
+EXPOSE 10000
+
+CMD ["sh", "-c", "gunicorn -w 1 --timeout 120 -b 0.0.0.0:${PORT:-10000} model_api.app:app"]
