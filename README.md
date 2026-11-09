@@ -1,7 +1,7 @@
 # VisionGuard (ROLLNO_A2_Ops)
 
 ![CI](https://github.com/<user>/<ROLLNO_A2_Ops>/actions/workflows/ci.yml/badge.svg)
-
+![CI](https://github.com/Moeezijaz1/23L-0750_A2_Ops/actions/workflows/ci.yml/badge.svg)
 AI-generated vs real image classifier: TensorFlow/Keras, MLflow on DagsHub, Flask + database, Docker Compose, cloud-hosted model API.
 
 * DagsHub: https://dagshub.com/<user>/<ROLLNO_A2_Ops>
